@@ -1,0 +1,142 @@
+<conversation>
+	<event>
+		<0>action</0>
+		<1>checkDisk</1>
+		<2>17</2>
+		<3>19</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Work as usual.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>But, hey, you've got an Akilini vest.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I've got a really good disk you might want; I used to play Akilini.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Ta Metru, level 7. That's really good. I can sell it for 800 widgets.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkWidgets</1>
+		<2>800</2>
+		<3>10</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'm afraid that's a little pricey.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Yeah, but I know it's really valuable.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Buy disk for 800 widgets?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>yes</2>
+		<3>goto</3>
+		<4>14</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>No, thanks.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>999</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>All right. I could use it.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Here you go.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>addDisk</1>
+		<2>17</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>remove</2>
+		<3>800</3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>This is backbreaking stuff. Whose idea was this?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>We should get breaks more often.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

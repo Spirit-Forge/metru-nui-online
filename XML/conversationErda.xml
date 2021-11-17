@@ -1,0 +1,23 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>I don't know where you're going...</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>...but the Vahki patrols are weaker at night.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Just sayin'</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

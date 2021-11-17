@@ -1,0 +1,142 @@
+<conversation>
+	<event>
+		<0>action</0>
+		<1>checkDisk</1>
+		<2>56</2>
+		<3>19</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Wonderful ambience in here. What privelage we enjoy!</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>And you, as an athlete. Now, wait a minute...</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I have a Le Metru level 6 disk. Are you interested in it?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'd sell it to you for... oh, 450 widgets. That's fair.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkWidgets</1>
+		<2>450</2>
+		<3>10</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I can't afford it.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I suppose athletes don't make much money...</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Buy disk for 450 widgets?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>yes</2>
+		<3>goto</3>
+		<4>14</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>No, thanks.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>999</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Okay, we'll trade.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Excellent. Here you go.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>addDisk</1>
+		<2>56</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>remove</2>
+		<3>450</3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Have you been to the concert yet?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Every night at eight o'clock.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

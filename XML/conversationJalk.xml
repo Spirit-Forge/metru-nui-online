@@ -1,0 +1,44 @@
+<conversation>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.second</1>
+		<2>true</2>
+		<3>goto</3>
+		<4>6</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Things really do quiet down at night, don't they?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'm the night watchman around here. Nice to meet you.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Nice to meet you.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Good night.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

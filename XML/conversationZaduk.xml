@@ -1,0 +1,86 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Gently used metal poles! Get them here! Only 40 widgets.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkWidgets</1>
+		<2>40</2>
+		<3>5</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Sorry, I don't have enough money.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>counter</0>
+		<1>How many metal poles do you want?</1>
+		<2>40</2>
+		<3>widgets</3>
+		<4>part1</4>
+	</event>
+	<event>
+		<0>counter</0>
+		<1>How many metal poles do you want?</1>
+		<2>player</2>
+		<3>widgets</3>
+		<4>part2</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>No, thanks.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'll take a pole!</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Anytime, my friend.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>item</1>
+		<2>add</2>
+		<3>25</3>
+		<4>countNum</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>remove</2>
+		<3>40</3>
+		<4>checkNum</4>
+	</event>
+</conversation>

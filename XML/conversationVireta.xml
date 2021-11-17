@@ -1,0 +1,86 @@
+<conversation>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.second</1>
+		<2>true</2>
+		<3>goto</3>
+		<4>12</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Welcome to the Archival Museum.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>This is one of the few places that outsiders can witness the wonders of the Archives.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>It was designed for scholars...</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>...but too often it is muddied by the hands of the common folk.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>You've got a vest. At least you have some rank.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Albeit only an athlete. Too bad.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>There's nothing wrong with being an athlete.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Well, it's a bit crude, that's all.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Enjoy my Archives. Try not to break anything.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I can't waste my time with people like you.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

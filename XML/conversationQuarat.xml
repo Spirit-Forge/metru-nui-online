@@ -1,0 +1,30 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Marvelous, isn't it?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>It's lovely.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I usually work in the lightstone mines, but I got leave to come here. It's great.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I wish I were privilaged enough to visit a place like this all the time.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

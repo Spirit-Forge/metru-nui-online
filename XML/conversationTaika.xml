@@ -1,0 +1,107 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Hey, there. You going to head out to the desert?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Maybe. Why?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>It's pretty dangerous out there. You'll need some throwing disks.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'll sell a disk to you for 3 widgets</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkWidgets</1>
+		<2>3</2>
+		<3>8</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Sorry, I don't have enough money.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>counter</0>
+		<1>How many throwing disks do you want?</1>
+		<2>3</2>
+		<3>widgets</3>
+		<4>part1</4>
+	</event>
+	<event>
+		<0>counter</0>
+		<1>How many disks do you want?</1>
+		<2>player</2>
+		<3>widgets</3>
+		<4>part2</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>No thank you.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Sure, I'll take them.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Here you go. Be careful out there!</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>throwDisk</1>
+		<2>add</2>
+		<3>countNum</3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>remove</2>
+		<3>3</3>
+		<4>checkNum</4>
+	</event>
+</conversation>

@@ -1,0 +1,20 @@
+<Vahki_Array>
+	<Vahki>
+		<name>Edna</name>
+		<type>Ko</type>
+		<area>
+			<room>chute</room>
+			<room>square</room>
+			<room>door</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+	<Vahki>
+		<name>Doris</name>
+		<type>Ta</type>
+		<area>
+			<room>warehouse1</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+</Vahki_Array>

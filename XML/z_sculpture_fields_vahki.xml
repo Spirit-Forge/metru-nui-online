@@ -1,0 +1,10 @@
+<Vahki_Array>
+	<Vahki>
+		<name>Fluffy</name>
+		<type>Po</type>
+		<area>
+			<room>gate</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+</Vahki_Array>

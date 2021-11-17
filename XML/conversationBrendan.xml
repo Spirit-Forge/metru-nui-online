@@ -1,0 +1,64 @@
+<conversation>
+	<event>
+		<type>condition</type>
+		<variable>_root.conversation.second</variable>
+		<value>true</value>
+		<action>goto</action>
+		<data>11</data>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Hey, are you interested in a lightstone?</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>decision</type>
+		<data>Accept lightstone?</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>condition</type>
+		<variable>_root.conversation.decision</variable>
+		<value>no</value>
+		<action>goto</action>
+		<data>7</data>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Sure, I'll take one of those</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Here you are. Just like the doctor ordered.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>action</type>
+		<specifically>item</specifically>
+		<data>remove</data>
+		<item>1</item>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>No, thanks, I don't like buying into fads</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Well, if you change your mind, you know where to come.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>condition</type>
+		<variable>_root.conversation.second</variable>
+		<value>false</value>
+		<action>goto</action>
+		<data>100</data>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Hey, dude. I like my lightstones.</data>
+		<speaker>matoran</speaker>
+	</event>
+</conversation>

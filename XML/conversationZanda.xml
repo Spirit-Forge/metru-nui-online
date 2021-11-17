@@ -1,0 +1,23 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Ah, after a long day at the desk, it's lovely to spend an evening at the club.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>It's exclusive, you know. No riff-raff to bother us.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Ah, what luxuries we enjoy!</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

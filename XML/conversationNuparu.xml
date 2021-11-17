@@ -1,0 +1,226 @@
+<conversation>
+	<event>
+		<0>action</0>
+		<1>checkBoard</1>
+		<2>speed</2>
+		<3>5</3>
+		<4>30</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkBoard</1>
+		<2>speed</2>
+		<3>2</3>
+		<4>3</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>23</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Splendid! I can certainly speed that hoverboard up.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Yes, and perhaps my new rocket launcher can be of use...</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>It's expensive, though. It will cost 400 widgets.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkWidgets</1>
+		<2>400</2>
+		<3>11</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I can't afford that.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Not many people can, let me assure you!</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Upgrade speed for 400 widgets?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>yes</2>
+		<3>goto</3>
+		<4>16</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Not yet.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Take your time.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'd like you to upgrade my hoverboard's speed.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Excellent! I was just working on my own upgrades...</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>hoverBoard</1>
+		<2>speed</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>remove</2>
+		<3>400</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>A fine job! Not perfect, but not much is.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Thank you!</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.second</1>
+		<2>true</2>
+		<3>goto</3>
+		<4>29</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>What brings you down here?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'm exploring. But who are you?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Who am I? My friend, I am Nuparu! The famous inventor!</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I can even speed up hoverboards, but yours is a bit simple.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'll have a look at your board, but first you have to make it a bit faster.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>You know, this isn't really my specialty. I don't know if I could make it better.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>But someone in the Moto Hub would definitely know how to speed it up.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

@@ -1,0 +1,23 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Chute 47, you are clear for adjustment</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'm sorry, I don't have time to talk to you.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I really need to focus on my job. It's not easy to direct traffic.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

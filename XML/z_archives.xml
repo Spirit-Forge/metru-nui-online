@@ -1,0 +1,25 @@
+<zoneData>
+	<westTown>
+		<neighbors>hut1,hut2,tunnel</neighbors>
+		<specialEvent>
+			<condition>player.playerData[0][3]</condition>
+			<equals>45</equals>
+			<action>m_greetings</action>
+		</specialEvent>
+	</westTown>
+	<hut1>
+		<neighbors>westTown</neighbors>
+	</hut1>
+	<hut2>
+		<neighbors>westTown</neighbors>
+	</hut2>
+	<tunnel>
+		<neighbors>westTown,eastTown</neighbors>
+	</tunnel>
+	<eastTown>
+		<neighbors>tunnel,hut3</neighbors>
+	</eastTown>
+	<hut3>
+		<neighbors>eastTown</neighbors>
+	</hut3>
+</zoneData>

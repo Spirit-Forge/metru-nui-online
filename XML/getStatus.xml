@@ -1,0 +1,20 @@
+<playerStatus>
+	<location>room3</location>
+	<prevLocation>hallwayB</prevLocation>
+	<colors>red,yellow,pakari,aqua,ta,advisor,blue</colors>
+	<items>27,27,27,27,27,9,32</items>
+	<energy>76</energy>
+	<disks>0</disks>
+	<username>Takua</username>
+	<password>qwerty</password>
+	<widgets>1543</widgets>
+	<currentZone>akilini</currentZone>
+	<akiliniDisks>11</akiliniDisks>
+	<hoverDisk>555</hoverDisk>
+	<anarchist>7</anarchist>
+	<idealist>0</idealist>
+	<airship>0</airship>
+	<akilini>2</akilini>
+	<gamesWon>0</gamesWon>
+	<temple>0</temple>
+</playerStatus>

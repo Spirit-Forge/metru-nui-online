@@ -1,0 +1,72 @@
+<conversation>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.second</1>
+		<2>true</2>
+		<3>goto</3>
+		<4>10</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Hello, young squirt.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Young squirt?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I've been hunting Rahi longer than you've been alive.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'm responsible for hundreds of Archival records.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>So you'd better show some respect.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>That's impressive, sir.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>That's more like it.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Good day, sir.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

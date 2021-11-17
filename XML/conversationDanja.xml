@@ -1,0 +1,142 @@
+<conversation>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.second</1>
+		<2>true</2>
+		<3>goto</3>
+		<4>8</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Don't ask me what you're in for; I don't know.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Have you been arrested before?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Arrested before?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>yes</2>
+		<3>goto</3>
+		<4>8</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Then law requires me to tell you: for me to let you out...</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>...you have to give up your throwing disks and pay a fine.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Okay, then, do you agree to the terms?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Agree to terms?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>no</2>
+		<3>goto</3>
+		<4>19</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Yes, I agree.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Okay, then. Here you go.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkWidgets</1>
+		<2>20</2>
+		<3>16</3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>clear</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>17</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>remove</2>
+		<3>20</3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>throwDisk</1>
+		<2>clear</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>teleport</1>
+		<2>rotundaWest</2>
+		<3>hallwayA</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>No, I don't.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Then I can't let you out. Sorry.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

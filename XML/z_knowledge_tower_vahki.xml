@@ -1,0 +1,37 @@
+<Vahki_Array>
+	<Vahki>
+		<name>Bonzai</name>
+		<type>Ko</type>
+		<area>
+			<room>plaza</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+	<Vahki>
+		<name>Shenzi</name>
+		<type>Ko</type>
+		<area>
+			<room>floor2</room>
+			<room>room2a</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+	<Vahki>
+		<name>Ed</name>
+		<type>Ko</type>
+		<area>
+			<room>floor3</room>
+			<room>room3a</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+	<Vahki>
+		<name>Mufasa</name>
+		<type>Ko</type>
+		<area>
+			<room>floor4</room>
+			<room>room4a</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+</Vahki_Array>

@@ -1,0 +1,108 @@
+<conversation>
+	<event>
+		<type>condition</type>
+		<variable>_root.conversation.second</variable>
+		<value>true</value>
+		<action>goto</action>
+		<data>17</data>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Hey! Number thirty-seven! Back to work! Oh, hello there.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Hello. Who are you?</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>I'm the foreman here. Keeping this rowdy bunch of workers in line.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>You must be new. But wait; I recognize your face from somewhere.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Yes, I play Akilini.</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Ah, that explains the sash. Do you want me to tell you about this place?</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>decision</type>
+		<data>Listen to description?</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>condition</type>
+		<variable>_root.conversation.decision</variable>
+		<value>no</value>
+		<action>goto</action>
+		<data>14</data>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Sure. I'd love to hear about it.</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Well, bla bla bla.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Hope to see you around.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>action</type>
+		<variable>goto</variable>
+		<value>120</value>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>No thanks. I'll just look around.</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>No problem. Good luck with Akilini.</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>action</type>
+		<variable>goto</variable>
+		<value>120</value>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Hey, how are you? Want to hear about the Furnace again?</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>decision</type>
+		<data>Listen to description?</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>condition</type>
+		<variable>_root.conversation.decision</variable>
+		<value>no</value>
+		<action>goto</action>
+		<data>14</data>
+	</event>
+	<event>
+		<type>action</type>
+		<variable>goto</variable>
+		<value>10</value>
+	</event>
+</conversation>

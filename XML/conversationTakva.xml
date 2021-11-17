@@ -1,0 +1,275 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Ah, good to see you, my friend.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.player.playerStatus.15</1>
+		<2>0</2>
+		<3>goto</3>
+		<4>4</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>15</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I'll bet you'd like to hear about the Akilini system.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Learn about Akilini?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>no</2>
+		<3>goto</3>
+		<4>15</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Yes, tell me about it.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>All right, here's the deal: you are on a two matoran team.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>You will start on defense.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>You need to block disks going into the left hoop by throwing yours in the way.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Halfway through the game, you switch and are on offense.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>You need to get your disk in the right hoop.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Use the field to bump you high enough to score.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Also, if you need to practice, there's a field in an Assembler's Village you can use.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.stage.platform.player.activeItem</1>
+		<2>11</2>
+		<3>goto</3>
+		<4>18</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>When you're ready to play, get out your Akilini disk and talk to me.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.player.playerStatus.15</1>
+		<2>3</2>
+		<3>goto</3>
+		<4>32</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Are you ready to play the next game?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Ready to play?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>no</2>
+		<3>goto</3>
+		<4>29</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Yes, I'm ready.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Good. I'll tell the other team, and the game will start right away.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.player.playerStatus.15</1>
+		<2>1</2>
+		<3>goto</3>
+		<4>27</4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.player.playerStatus.15</1>
+		<2>2</2>
+		<3>goto</3>
+		<4>28</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>teleport</1>
+		<2>m_G1_intro</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>teleport</1>
+		<2>m_G2_intro</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>teleport</1>
+		<2>m_G3_intro</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Not yet.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Well, when you are, I'm here for you.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Are you ready for the championship?</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Ready to play?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>no</2>
+		<3>goto</3>
+		<4>38</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Yes, I'm ready.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Good. The championship will begin in just a few moments.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>teleport</1>
+		<2>m_announcement</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Not yet.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Well, when you are, let me know.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

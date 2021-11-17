@@ -1,0 +1,163 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Just look at all of these pumps. All the protodermis.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>But it's all raw. It's all dirty and unclean. This is just the start.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>You know, Ga Matoran clean this stuff? I've got some pure protodermis.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>You want some? I'd give it to you, but I need a jar to put it in.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Oh, yes, and it's 100 widgets a jar.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.stage.platform.player.activeItem</1>
+		<2>31</2>
+		<3>goto</3>
+		<4>8</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>12</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>checkWidgets</1>
+		<2>100</2>
+		<3>15</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>I can't afford it. That's expensive.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>It's rare stuff.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Sorry, I don't have a jar.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>They've got loads in Ga Metru. Try there.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>decision</0>
+		<1>Pure Protodermis for 100 widgets?</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>condition</0>
+		<1>_root.conversation.decision</1>
+		<2>yes</2>
+		<3>goto</3>
+		<4>19</4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>No, thanks.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>goto</1>
+		<2>100</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Yes, please. Here's my jar.</1>
+		<2>player</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>item</1>
+		<2>remove</2>
+		<3>31</3>
+		<4>1</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>item</1>
+		<2>add</2>
+		<3>30</3>
+		<4>1</4>
+	</event>
+	<event>
+		<0>action</0>
+		<1>widget</1>
+		<2>remove</2>
+		<3>100</3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Great. Any time.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

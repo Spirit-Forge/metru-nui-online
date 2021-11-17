@@ -1,0 +1,23 @@
+<conversation>
+	<event>
+		<0>speech</0>
+		<1>Check. 10-4.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Excuse me, youth, but I have to focus on my job.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+	<event>
+		<0>speech</0>
+		<1>Please clear the tower area. Thank you.</1>
+		<2>matoran</2>
+		<3></3>
+		<4></4>
+	</event>
+</conversation>

@@ -1,0 +1,62 @@
+<conversation>
+	<event>
+		<type>speech</type>
+		<data>Hello, my name is Billy!</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Well, that's just swell!</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>condition</type>
+		<variable>_root.scene.currentScene</variable>
+		<value>hut1</value>
+		<action>goto</action>
+		<data>20</data>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Listen, do you want to go to the east town? You can just ask me!</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>decision</type>
+		<data>Go with Zalif?</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>condition</type>
+		<variable>_root.conversation.decision</variable>
+		<value>no</value>
+		<action>goto</action>
+		<data>10</data>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Yeah, I felt like heading over there anyway.</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Okay. Hold onto your horses, 'cause here you go!</data>
+		<speaker>matoran</speaker>
+	</event>
+	<event>
+		<type>action</type>
+		<specifically>teleport</specifically>
+		<data>eastTown</data>
+		<enterWhere>tunnel</enterWhere>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>No, thanks, I'll stay here</data>
+		<speaker>player</speaker>
+	</event>
+	<event>
+		<type>speech</type>
+		<data>Sure thing. Catch you later!</data>
+		<speaker>matoran</speaker>
+	</event>
+</conversation>

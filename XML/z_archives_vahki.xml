@@ -1,0 +1,11 @@
+<Vahki_Array>
+	<Vahki>
+		<name>Zabu</name>
+		<type>Onu</type>
+		<area>
+			<room>chuteA</room>
+			<room>chuteB</room>
+		</area>
+		<time>all</time>
+	</Vahki>
+</Vahki_Array>
