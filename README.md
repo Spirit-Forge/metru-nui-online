@@ -1,2 +1,3 @@
-# metru-nui-online
-MeNOL - Metru Nui OnLine
+# MeNOL - Metru Nui OnLine
+
+Metru Nui OnLine, with automatic progress saving.
