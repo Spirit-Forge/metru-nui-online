@@ -290,13 +290,13 @@ async function bundle(bundle, pkg, delay = false) {
 	await bundle.withData(
 		await shockpkgFile(pkg),
 		loader(
-			8,
-			742,
-			556,
-			20,
-			0x000000,
+			6,
+			800,
+			600,
+			24,
+			0xFFFFFF,
 			'metrunuionline.swf',
-			delay ? 20 / 2 : 0
+			delay ? 24 / 2 : 0
 		),
 		async b => {
 			await b.copyResourceFile(
