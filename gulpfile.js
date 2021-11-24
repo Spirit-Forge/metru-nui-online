@@ -169,6 +169,9 @@ async function readSourcesFiltered(each) {
 		if (!/\.(swf|xml|mp3|wav)$/i.test(entry.path)) {
 			return;
 		}
+		if (/XML\/getStatus\.xml$/i.test(entry.path)) {
+			return;
+		}
 		await each(entry);
 	});
 }
