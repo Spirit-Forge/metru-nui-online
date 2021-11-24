@@ -249,6 +249,16 @@ var setupApi = function() {
 		forKeys(queryParse(url), function(k, v) {
 			state[k] = v;
 		});
+
+		// Defaults from insertUser.php file.
+		state.location = "chute";
+		state.prevLocation = "elsewhere";
+		state.currentZone = "z_moto_hub";
+		state.energy = "100";
+		state.hoverDisk = "111";
+		state.widgets = "30";
+		state.items = "3,3,3,27,27";
+
 		save.status.set(statusToXml(state));
 		return resultsetTags.join("");
 	};
