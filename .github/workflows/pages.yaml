@@ -7,7 +7,7 @@ on:
 
 env:
   MENOL_API_URL: https://www.maskofdestiny.com/wp-admin/admin-ajax.php?action=mod-game-save-api
-  MENOL_API_NAME: MaskOfDestiny
+  MENOL_API_NAME: 'Mask of Destiny'
   MENOL_API_LINK: https://www.maskofdestiny.com/
 
 jobs:
