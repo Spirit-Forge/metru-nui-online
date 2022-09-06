@@ -35,7 +35,10 @@ import {
 	SourceDir
 } from './util/sources.mjs';
 import {Server} from './util/server.mjs';
+
 const {
+	appName,
+	appDomain,
 	version,
 	author,
 	copyright
@@ -45,8 +48,6 @@ const pipelineP = util.promisify(stream.pipeline);
 const imageSizeP = util.promisify(imageSize);
 const innosetupP = util.promisify(innosetup);
 
-const appName = 'Metru Nui OnLine';
-const appDomain = 'io.github.spirit-forge.MetruNuiOnLine';
 const distName = slugify(`${appName} ${version}`);
 const versionShort = version.split('.').slice(0, 2).join('.');
 const serverPort = +process.env.SERVER_PORT;

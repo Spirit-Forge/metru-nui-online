@@ -1,5 +1,7 @@
 {
 	"private": true,
+	"appName": "Metru Nui OnLine",
+	"appDomain": "io.github.spirit-forge.MetruNuiOnLine",
 	"version": "1.0.1",
 	"author": "Spirit Forge",
 	"copyright": "Copyright Tula and -Takua-. Re-release by Spirit Forge.",
