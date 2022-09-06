@@ -35,7 +35,7 @@ import {
 import {
 	SourceZip,
 	SourceDir
-} from './util/sources.mjs';
+} from './util/source.mjs';
 
 const {
 	appName,
