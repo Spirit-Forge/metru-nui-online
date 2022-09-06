@@ -36,7 +36,6 @@ import {
 	SourceZip,
 	SourceDir
 } from './util/sources.mjs';
-import {Server} from './util/server.mjs';
 
 const {
 	appName,
@@ -48,7 +47,6 @@ const {
 
 const distName = slugify(`${appName}-${version}`);
 const versionShort = version.split('.').slice(0, 2).join('.');
-const serverPort = +process.env.SERVER_PORT;
 
 const sources = {
 	'mod': () => new SourceDir(
@@ -314,17 +312,6 @@ async function buildLinux64(dir, pkg) {
 	await addDocs(dest);
 }
 
-async function server(dir) {
-	const server = new Server();
-	server.dir = dir;
-	if (serverPort) {
-		server.port = serverPort;
-	}
-	await server.run(() => {
-		console.log(`Server running at: ${server.base}`);
-	});
-}
-
 gulp.task('clean', async () => {
 	await fse.remove('build');
 	await fse.remove('dist');
@@ -471,8 +458,4 @@ gulp.task('dist:linux-i386:tgz', async () => {
 
 gulp.task('dist:linux-x86_64:tgz', async () => {
 	await makeTgz(`dist/${distName}-Linux-x86_64.tgz`, 'build/linux-x86_64');
-});
-
-gulp.task('run:browser', async () => {
-	await server('build/browser/data');
 });
