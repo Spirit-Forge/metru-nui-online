@@ -1,4 +1,4 @@
-# Metru Nui OnLine -- README
+# Metru Nui OnLine – README
 
 Travel to Metru Nui and become an Akilini champion. Develop your skills, collect new disks, and face incredible challenges. But all is not as it seems in the City of Legends. Choose your allies, solve the mysteries. The destiny of the city lies in your hands...
 
