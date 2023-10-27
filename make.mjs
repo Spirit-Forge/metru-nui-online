@@ -1,4 +1,4 @@
-import {readFile} from 'fs/promises';
+import {readFile, rm} from 'node:fs/promises';
 
 import {Manager} from '@shockpkg/core';
 import {
@@ -8,6 +8,7 @@ import {
 	ValueBoolean
 } from '@shockpkg/plist-dom';
 import {
+	BundleHtml,
 	BundleSaWindows,
 	BundleSaMac,
 	BundleSaLinux,
@@ -28,11 +29,10 @@ import {
 import {docs} from './util/doc.mjs';
 import {isMac, codesign} from './util/mac.mjs';
 import {makeZip, makeTgz, makeExe, makeDmg} from './util/dist.mjs';
-import {copyFile, outputFile, remove} from './util/fs.mjs';
 import {templateStrings} from './util/string.mjs';
 import {SourceZip, SourceDir, readSources} from './util/source.mjs';
 
-async function * resources() {
+async function * resources(browser = false) {
 	for await (const [file, read] of readSources([
 		new SourceDir('mod'),
 		new SourceZip('original/MeNOL.zip', 'MeNOL/')
@@ -44,9 +44,17 @@ async function * resources() {
 			yield [file, await read()];
 		}
 	}
+	const src = browser ? 'src/browser' : 'src/projector';
+	const files = ['metrunuionline.swf'];
+	if (browser) {
+		files.push('main.js', 'main.css');
+	}
+	for (const f of files) {
+		yield [f, await readFile(`${src}/${f}`)];
+	}
 }
 
-function movie(delay) {
+function projected(delay) {
 	const swfv = 6;
 	const [w, h] = [800, 600];
 	const fps = 24;
@@ -55,69 +63,52 @@ function movie(delay) {
 	return loader(swfv, w, h, fps, bg, url, delay ? Math.round(fps / 2) : 0);
 }
 
-async function bundler(b) {
-	for await (const [file, data] of resources()) {
-		await b.createResourceFile(file, data);
-	}
-	await b.copyResourceFile(
-		'metrunuionline.swf',
-		'src/projector/metrunuionline.swf'
-	);
-}
-
-async function browser(dest) {
-	for await (const [file, data] of resources()) {
-		await outputFile(`${dest}/${file}`, data);
-	}
-	await Promise.all([
-		'metrunuionline.swf',
-		'main.js',
-		'main.css'
-	].map(f => copyFile(`src/browser/${f}`, `${dest}/${f}`)));
-	const defaultPrefix = 'metrunuionline.';
-	await outputFile(`${dest}/index.html`, templateStrings(
-		await readFile('src/browser/index.html', 'utf8'),
-		{
-			LS_PREFIX: process.env.MENOL_LS_PREFIX || defaultPrefix,
-			API_PREFIX: process.env.MENOL_API_PREFIX || defaultPrefix,
-			API_URL: process.env.MENOL_API_URL || '',
-			API_NAME: process.env.MENOL_API_NAME || '',
-			API_LINK: process.env.MENOL_API_LINK || ''
-		}
-	));
-}
-
 const task = {'': _ => Object.keys(task).map(t => t && console.error(t)) && 1};
 
 task['clean'] = async () => {
-	await remove('build', 'dist');
+	await rm('dist', {force: true, recursive: true});
+	await rm('build', {force: true, recursive: true});
 };
 
-task['build:pages'] = async () => {
-	const build = 'build/pages';
-	await remove(build);
-	await browser(build);
-	await docs('docs', build);
-};
+for (const [type, flat] of Object.entries({
+	'pages': true,
+	'browser': false
+})) {
+	const build = `build/${type}`;
+	task[`build:${type}`] = async () => {
+		await rm(build, {force: true, recursive: true});
+		const file = flat ? 'index.html' : `${appFile}.html`;
+		const b = new BundleHtml(`${build}/${file}`, flat);
+		b.projector.lang = 'en-US';
+		b.projector.title = appName;
+		const defaultPrefix = 'metrunuionline.';
+		b.projector.html = async () => templateStrings(
+			await readFile('src/browser/index.html', 'utf8'),
+			{
+				LS_PREFIX: process.env.MENOL_LS_PREFIX || defaultPrefix,
+				API_PREFIX: process.env.MENOL_API_PREFIX || defaultPrefix,
+				API_URL: process.env.MENOL_API_URL || '',
+				API_NAME: process.env.MENOL_API_NAME || '',
+				API_LINK: process.env.MENOL_API_LINK || ''
+			}
+		);
+		await b.write(async b => {
+			for await (const [file, data] of resources(true)) {
+				await b.createResourceFile(file, data);
+			}
+		});
+		await docs('docs', build);
+	};
+}
 
-task['build:browser'] = async () => {
-	const build = 'build/browser';
-	await remove(build);
-	await browser(`${build}/data`);
-	await outputFile(
-		`${build}/${appFile}.html`,
-		'<meta http-equiv="refresh" content="0;url=data/index.html">\n'
-	);
-	await docs('docs', build);
-};
-
-task['dist:browser:zip'] = async () => {
-	await makeZip(`dist/${distName}-Browser.zip`, 'build/browser');
-};
-
-task['dist:browser:tgz'] = async () => {
-	await makeTgz(`dist/${distName}-Browser.tgz`, 'build/browser');
-};
+for (const [type, make] of Object.entries({
+	'zip': makeZip,
+	'tgz': makeTgz
+})) {
+	task[`dist:browser:${type}`] = async () => {
+		await make(`dist/${distName}-Browser.${type}`, 'build/browser');
+	};
+}
 
 for (const [type, pkg] of Object.entries({
 	'i386': 'flash-player-35.0.0.204-windows-i386-sa-2022-08-13',
@@ -126,11 +117,11 @@ for (const [type, pkg] of Object.entries({
 })) {
 	const build = `build/windows-${type}`;
 	task[`build:windows-${type}`] = async () => {
-		await remove(build);
+		await rm(build, {force: true, recursive: true});
 		const file = `${appFile}.exe`;
 		const b = new BundleSaWindows(`${build}/${file}`);
 		b.projector.player = await new Manager().file(pkg);
-		b.projector.movieData = movie(false);
+		b.projector.movieData = projected(false);
 		b.projector.versionStrings = {
 			FileVersion: version,
 			ProductVersion: versionShort,
@@ -147,7 +138,11 @@ for (const [type, pkg] of Object.entries({
 		b.projector.patchWindowTitle = appName;
 		b.projector.patchOutOfDateDisable = true;
 		b.projector.removeCodeSignature = true;
-		await b.write(bundler);
+		await b.write(async b => {
+			for await (const [file, data] of resources()) {
+				await b.createResourceFile(file, data);
+			}
+		});
 		await docs('docs', build);
 	};
 	task[`dist:windows-${type}:zip`] = async () => {
@@ -182,11 +177,11 @@ for (const [type, pkg] of Object.entries({
 })) {
 	const build = `build/mac-${type}`;
 	task[`build:mac-${type}`] = async () => {
-		await remove(build);
+		await rm(build, {force: true, recursive: true});
 		const pkgInfo = 'APPL????';
 		const b = new BundleSaMac(`${build}/${appFile}.app`);
 		b.projector.player = await new Manager().file(pkg);
-		b.projector.movieData = movie(false);
+		b.projector.movieData = projected(false);
 		b.projector.binaryName = appFile;
 		b.projector.pkgInfoData = pkgInfo;
 		b.projector.infoPlistData = (new Plist(new ValueDict(new Map([
@@ -218,7 +213,11 @@ for (const [type, pkg] of Object.entries({
 		b.projector.patchWindowTitle = appName;
 		b.projector.removeInfoPlistStrings = true;
 		b.projector.removeCodeSignature = true;
-		await b.write(bundler);
+		await b.write(async b => {
+			for await (const [file, data] of resources()) {
+				await b.createResourceFile(file, data);
+			}
+		});
 		if (isMac) {
 			await codesign(b.projector.path);
 			await codesign(b.path);
@@ -253,14 +252,18 @@ for (const [type, pkg] of Object.entries({
 })) {
 	const build = `build/linux-${type}`;
 	task[`build:linux-${type}`] = async () => {
-		await remove(build);
+		await rm(build, {force: true, recursive: true});
 		const b = new BundleSaLinux(`${build}/${appFile}`);
 		b.projector.player = await new Manager().file(pkg);
-		b.projector.movieData = movie(true);
+		b.projector.movieData = projected(true);
 		b.projector.patchProjectorOffset = /x86_64/.test(type);
 		b.projector.patchProjectorPath = true;
 		b.projector.patchWindowTitle = appName;
-		await b.write(bundler);
+		await b.write(async b => {
+			for await (const [file, data] of resources()) {
+				await b.createResourceFile(file, data);
+			}
+		});
 		await docs('docs', build);
 	};
 	task[`dist:linux-${type}:tgz`] = async () => {
